@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(226, 25%, 17%);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header__logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header__btn {
+  width: 40px;
+  height: 40px;
+  background-color: hsl(225, 23%, 24%);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.theme-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: hsl(225, 23%, 24%);
+  cursor: pointer;
+
+  &:hover {
+    transition: border 0.1s ease;
+    border: solid 2px hsl(3, 71%, 56%);
+    background-color: hsl(226, 11%, 37%);
+
+    .sun-icon {
+      fill: hsl(226, 11%, 37%);
+    }
+  }
+}
+
+.sun-icon {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+  fill: hsl(225, 23%, 24%);
+}
