@@ -1,0 +1,50 @@
+.task__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.to-do-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 1px hsl(226, 11%, 37%);
+  background-color: hsl(226, 25%, 17%);
+
+  .task__input {
+    width: 40%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    border: solid 1px hsl(226, 11%, 37%);
+    background-color: hsl(226, 25%, 17%);
+    color: white;
+  }
+
+  .add-task-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    border: solid 1px hsl(226, 11%, 37%);
+    background-color: hsl(225, 23%, 24%);
+    cursor: pointer;
+
+    &:hover {
+      transition: border 0.1s ease;
+      box-shadow: 0 0 0 2px hsl(3, 71%, 56%);
+      background-color: hsl(226, 11%, 37%);
+    }
+  }
+}

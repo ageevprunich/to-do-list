@@ -6,7 +6,7 @@ import { ReactComponent as SunIcon } from '../assets/icon-sun.svg';
 
 function Header() {
     return (
-        <div className="container">
+        <div className='header-container'>
             <header className="header">
                 <div className="header__logo">
                     <span>ToDo</span>
