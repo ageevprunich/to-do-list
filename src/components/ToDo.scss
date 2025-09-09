@@ -8,39 +8,51 @@
   border-radius: 20px;
   border: solid 1px hsl(226, 11%, 37%);
   background-color: hsl(225, 23%, 24%);
+}
 
-  .task__name {
-    font-size: 24px;
-    font-weight: 600;
-    color: hsl(0, 0%, 100%);
-    margin-bottom: 10px;
+.task__name {
+  font-size: 24px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 10px;
+}
+
+.task__description {
+  font-size: 18px;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 10px;
+}
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.task__btn {
+  padding: 10px 20px;
+  border-radius: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: solid 1px hsl(226, 11%, 37%);
+  background-color: hsl(225, 23%, 24%);
+  cursor: pointer;
+
+  &:hover {
+    transition: border 0.1s ease;
+    outline: 2px solid hsl(3, 71%, 56%);
+    background-color: hsl(226, 11%, 37%);
   }
+}
 
-  .task__description {
-    font-size: 18px;
-    font-weight: 400;
-    color: hsl(0, 0%, 100%);
-    margin-bottom: 10px;
-  }
-  .btn-container {
-    display: flex;
-    gap: 10px;
-
-    .task__btn {
-      padding: 10px 20px;
-      border-radius: 45px;
-      color: white;
-      font-size: 16px;
-      font-weight: 500;
-      border: solid 1px hsl(226, 11%, 37%);
-      background-color: hsl(225, 23%, 24%);
-      cursor: pointer;
-
-      &:hover, &:focus {
-        transition: border 0.1s ease;
-        outline: 2px solid hsl(3, 71%, 56%);
-        background-color: hsl(226, 11%, 37%);
-      }
-    }
-  }
+.task__editing {
+  width: 40%;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  border: solid 1px hsl(226, 11%, 37%);
+  background-color: hsl(226, 25%, 17%);
+  color: white;
 }

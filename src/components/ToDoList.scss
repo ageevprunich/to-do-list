@@ -20,11 +20,13 @@
   color: white;
   font-size: 16px;
   font-weight: 500;
+  outline: none;
   border: solid 1px hsl(226, 11%, 37%);
   background-color: hsl(225, 23%, 24%);
   cursor: pointer;
 
   &.active {
+    transition: background-color 0.2s ease;
     background-color: hsl(3, 71%, 56%);
     color: hsl(227, 75%, 14%);
     border: none;
@@ -32,7 +34,8 @@
   }
 
   &:hover {
-    transition: border 0.1s ease;
+    transition: box-shadow 0.1s ease;
+    border: none;
     box-shadow: 0 0 0 2px hsl(3, 71%, 56%);
     background-color: hsl(226, 11%, 37%);
   }
@@ -45,5 +48,3 @@
   gap: 20px;
   width: 100%;
 }
-
-
