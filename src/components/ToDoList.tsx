@@ -14,8 +14,15 @@ interface ToDo {
 }
 
 function ToDoList() {
-    const [toDos, setToDos] = useState<ToDo[]>([]);
+    const [toDos, setToDos] = useState<ToDo[]>(() => {
+        const saved = localStorage.getItem("toDos");
+        return saved ? JSON.parse(saved) : [];
+    });
     const [filter, setFilter] = useState<'all' | 'done' | 'in-progress'>('all');
+
+    useEffect(() => {
+        localStorage.setItem('toDos', JSON.stringify(toDos));
+    }, [toDos]);
 
     const addToDo = (todo : { taskName: string; taskDescription: string}) => {
         setToDos([...toDos, {

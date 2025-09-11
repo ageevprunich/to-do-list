@@ -5,13 +5,25 @@ import { ReactComponent as MoonIcon } from '../assets/icon-moon.svg';
 
 
 function Header() {
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+        const saved = localStorage.getItem("theme");
+        return saved ? (saved as 'light' | 'dark') : 'light';
+    });
 
     const themeToggle = () => {
         setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
     }
 
     useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            setTheme(savedTheme as 'light' | 'dark');
+            document.body.className = savedTheme;
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
         document.body.className = theme;
     }, [theme]);
 

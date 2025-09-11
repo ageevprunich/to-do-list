@@ -23,7 +23,7 @@ function ToDo({ todo, toggleComplete, deleteToDo, editToDo, saveToDo }: ToDoProp
         return <div className="task" >
             <input type="text" className="task__editing" value={editedTaskName} onChange={(e) => setEditedTaskName(e.target.value)} />
             <input type="text" className="task__editing" value={editedTaskDescription} onChange={(e) => setEditedTaskDescription(e.target.value)} />
-            <button className="task__btn" onClick={() => saveToDo(todo.id, editedTaskName, editedTaskDescription)}>💾 Save</button>
+            <button className="task__btn" onClick={() => saveToDo(todo.id, editedTaskName, editedTaskDescription)}>Save</button>
         </div >;
     }
 
