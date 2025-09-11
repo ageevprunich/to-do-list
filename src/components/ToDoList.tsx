@@ -1,7 +1,7 @@
 import ToDoForm from './ToDoForm';
 import ToDo from './ToDo';
 import './ToDoList.scss';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { isEditable } from '@testing-library/user-event/dist/utils';
 
@@ -15,7 +15,7 @@ interface ToDo {
 
 function ToDoList() {
     const [toDos, setToDos] = useState<ToDo[]>([]);
-    const [filter, setFilter] = useState < 'all' | 'done' | 'in-progress' > ('all');
+    const [filter, setFilter] = useState<'all' | 'done' | 'in-progress'>('all');
 
     const addToDo = (todo : { taskName: string; taskDescription: string}) => {
         setToDos([...toDos, {

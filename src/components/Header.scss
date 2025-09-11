@@ -1,8 +1,9 @@
+@import '../styles/variables';
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: hsl(226, 25%, 17%);
+  background-color: var(--secondary-bg-color);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -16,7 +17,7 @@
 .header__btn {
   width: 40px;
   height: 40px;
-  background-color: hsl(225, 23%, 24%);
+  background-color: var(--main-bg-color);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -26,16 +27,16 @@
   height: 100%;
   border-radius: 8px;
   border: none;
-  background-color: hsl(225, 23%, 24%);
+  background-color: var(--main-bg-color);
   cursor: pointer;
 
   &:hover {
     transition: border 0.1s ease;
-    border: solid 2px hsl(3, 71%, 56%);
-    background-color: hsl(226, 11%, 37%);
+    border: solid 2px var(--active-btn-color);
+    background-color: var(--border-color);
 
     .sun-icon {
-      fill: hsl(226, 11%, 37%);
+      fill: var(--border-color);
     }
   }
 }
@@ -44,5 +45,5 @@
   width: 20px;
   height: 20px;
   stroke: white;
-  fill: hsl(225, 23%, 24%);
+  fill: var(--main-bg-color);
 }
